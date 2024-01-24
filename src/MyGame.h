@@ -28,6 +28,7 @@ class MyGame {
     private:
         SDL_Rect player1 = { 0, 0, 20, 60 };
         SDL_Rect player2 = { 0, 0, 20, 60 };
+        SDL_Rect scoreboard = {200, 10, 60,60};
         int player1Score = 0;
         int player2Score = 0;
         

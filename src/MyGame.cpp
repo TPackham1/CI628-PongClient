@@ -66,7 +66,7 @@ void MyGame::update()
 
 
 // Simple work around for SDL not having native support for drawing circles
-// Solution found https://iq.opengenus.org/getting-started-2d-graphics-in-cpp-sdl2/
+// Solution found @ https://iq.opengenus.org/getting-started-2d-graphics-in-cpp-sdl2/
 void MyGame::drawCircle(SDL_Renderer* renderer)
 {
     for (int x = game_data.ballX - game_data.ballRadius; x <= game_data.ballX + game_data.ballRadius; x++) {
@@ -82,7 +82,7 @@ void MyGame::drawCircle(SDL_Renderer* renderer)
 };
 
 
-TTF_Font* font;
+
 
 void MyGame::render(SDL_Renderer* renderer) {
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
@@ -90,8 +90,8 @@ void MyGame::render(SDL_Renderer* renderer) {
     SDL_RenderDrawRect(renderer, &player2);
     drawCircle(renderer);
    
-    TTF_Init();
-    font = TTF_OpenFont("arial.ttf", 24);
-    
-
+   /* TTF_Init();
+   TTF_Font font = TTF_OpenFont("arial.ttf", 24);
+    SDL_Color White = { 255, 255, 255 };
+    SDL_Surface* scoreboard = TTF_RenderText_Solid(font,player1Score + "            " + player2Score,White);*/
 }
